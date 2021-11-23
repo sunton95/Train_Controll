@@ -1,0 +1,474 @@
+# =============================================================================
+# Created By  : Anton Sundqvist
+# Created Date: 2021-02-23
+# =============================================================================
+"""This module is built for """
+# =============================================================================
+# Imports
+import sys
+from LedIndicatorWidget import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QLabel
+#from coolstory import write_read
+# =============================================================================
+
+def gui_start():
+
+    def button1_clicked():
+        led1.setChecked(not led1.isChecked())
+        led2.setChecked(not led2.isChecked())
+        #write_read("1")
+
+    def button2_clicked():
+        led3.setChecked(not led3.isChecked())
+        led4.setChecked(not led4.isChecked())
+
+    def button3_clicked():
+        led5.setChecked(not led5.isChecked())
+        led6.setChecked(not led6.isChecked())
+
+    def button4_clicked():
+        led7.setChecked(not led7.isChecked())
+        led8.setChecked(not led8.isChecked())
+
+    def button5_clicked():
+        led9.setChecked(not led9.isChecked())
+        led10.setChecked(not led10.isChecked())
+
+    def button6_clicked():
+        led11.setChecked(not led11.isChecked())
+        led12.setChecked(not led12.isChecked())
+
+    def button7_clicked():
+        led13.setChecked(not led13.isChecked())
+        led14.setChecked(not led14.isChecked())
+
+    def button8_clicked():
+        led15.setChecked(not led15.isChecked())
+        led16.setChecked(not led16.isChecked())
+
+    def button9_clicked():
+        led17.setChecked(not led17.isChecked())
+        led18.setChecked(not led18.isChecked())
+
+    def button10_clicked():
+        led19.setChecked(not led19.isChecked())
+        led20.setChecked(not led20.isChecked())
+
+    def button11_clicked():
+        led21.setChecked(not led21.isChecked())
+        led22.setChecked(not led22.isChecked())
+
+    def button12_clicked():
+        led23.setChecked(not led23.isChecked())
+        led24.setChecked(not led24.isChecked())
+
+    def button13_clicked():
+        led25.setChecked(not led25.isChecked())
+        led26.setChecked(not led26.isChecked())
+
+    def button14_clicked():
+        led27.setChecked(not led27.isChecked())
+        led28.setChecked(not led28.isChecked())
+
+    def button15_clicked():
+        led29.setChecked(not led29.isChecked())
+        led30.setChecked(not led30.isChecked())
+
+    def button16_clicked():
+        led31.setChecked(not led31.isChecked())
+        led32.setChecked(not led32.isChecked())
+
+    def button17_clicked():
+        led33.setChecked(not led33.isChecked())
+        led34.setChecked(not led34.isChecked())
+
+    def button18_clicked():
+        led35.setChecked(not led35.isChecked())
+        led36.setChecked(not led36.isChecked())
+
+    def button19_clicked():
+        led37.setChecked(not led37.isChecked())
+        led38.setChecked(not led38.isChecked())
+
+    app = QApplication([])
+    window = QWidget()
+    window.setFixedWidth(1700)
+    window.setFixedHeight(900)
+
+    menubar = QMenuBar(window)
+    actionFile = menubar.addMenu("File")
+    actionFile.addAction("COM1")
+    actionFile.addAction("COM2")
+    actionFile.addAction("COM3")
+    actionFile.addAction("COM4")
+    actionFile.addAction("COM5")
+    actionFile.addAction("COM6")
+    actionFile.addSeparator()
+
+    label = QLabel(window)
+    pixmap = QPixmap('train.png')
+    label.setPixmap(pixmap)
+    topLayout = QHBoxLayout()
+    windowLayout = QVBoxLayout()
+    verticalButtonLayout = QVBoxLayout()
+
+    layout = QHBoxLayout()
+    button1 = QPushButton()
+    button1.setText("Växel 1")
+    button1.clicked.connect(button1_clicked)
+    led1 = LedIndicator()
+    led2 = LedIndicator()
+    led2.setChecked(True)
+    led1.setDisabled(True)  # Make the led non clickable
+    led2.setDisabled(True)  # Make the led non clickable
+    led2.on_color_1 = QColor(255, 0, 0)
+    led2.on_color_2 = QColor(176, 0, 0)
+    led2.off_color_1 = QColor(28, 0, 0)
+    led2.off_color_2 = QColor(156, 0, 0)
+    layout.addWidget(button1)
+    layout.addWidget(led1)
+    layout.addWidget(led2)
+    verticalButtonLayout.addLayout(layout)
+
+    layout_2 = QHBoxLayout()
+    button2 = QPushButton()
+    button2.setText("Växel 2")
+    button2.clicked.connect(button2_clicked)
+    led3 = LedIndicator()
+    led4 = LedIndicator()
+    led4.setChecked(True)
+    led4.setDisabled(True)  # Make the led non clickable
+    led4.setDisabled(True)  # Make the led non clickable
+    led4.on_color_1 = QColor(255, 0, 0)
+    led4.on_color_2 = QColor(176, 0, 0)
+    led4.off_color_1 = QColor(28, 0, 0)
+    led4.off_color_2 = QColor(156, 0, 0)
+    layout_2.addWidget(button2)
+    layout_2.addWidget(led3)
+    layout_2.addWidget(led4)
+    verticalButtonLayout.addLayout(layout_2)
+
+    layout_3 = QHBoxLayout()
+    button3 = QPushButton()
+    button3.setText("Växel 3")
+    button3.clicked.connect(button3_clicked)
+    led5 = LedIndicator()
+
+    led6 = LedIndicator()
+    led6.setChecked(True)
+    led6.setDisabled(True)  # Make the led non clickable
+    led6.setDisabled(True)  # Make the led non clickable
+    led6.on_color_1 = QColor(255, 0, 0)
+    led6.on_color_2 = QColor(176, 0, 0)
+    led6.off_color_1 = QColor(28, 0, 0)
+    led6.off_color_2 = QColor(156, 0, 0)
+    layout_3.addWidget(button3)
+    layout_3.addWidget(led5)
+    layout_3.addWidget(led6)
+    verticalButtonLayout.addLayout(layout_3)
+
+    layout_4 = QHBoxLayout()
+    button4 = QPushButton()
+    button4.setText("Växel 4")
+    button4.clicked.connect(button4_clicked)
+    led7 = LedIndicator()
+    led8 = LedIndicator()
+    led8.setChecked(True)
+    led8.setDisabled(True)  # Make the led non clickable
+    led8.setDisabled(True)  # Make the led non clickable
+    layout_4.addWidget(button4)
+    layout_4.addWidget(led7)
+    layout_4.addWidget(led8)
+    verticalButtonLayout.addLayout(layout_4)
+    led8.on_color_1 = QColor(255, 0, 0)
+    led8.on_color_2 = QColor(176, 0, 0)
+    led8.off_color_1 = QColor(28, 0, 0)
+    led8.off_color_2 = QColor(156, 0, 0)
+
+    layout_5 = QHBoxLayout()
+    button5 = QPushButton()
+    button5.setText("Växel 5")
+    button5.clicked.connect(button5_clicked)
+    led9 = LedIndicator()
+    led10 = LedIndicator()
+    led10.setChecked(True)
+    led10.setDisabled(True)  # Make the led non clickable
+    led10.setDisabled(True)  # Make the led non clickable
+    layout_5.addWidget(button5)
+    layout_5.addWidget(led9)
+    layout_5.addWidget(led10)
+    verticalButtonLayout.addLayout(layout_5)
+    led10.on_color_1 = QColor(255, 0, 0)
+    led10.on_color_2 = QColor(176, 0, 0)
+    led10.off_color_1 = QColor(28, 0, 0)
+    led10.off_color_2 = QColor(156, 0, 0)
+
+    layout_6 = QHBoxLayout()
+    button6 = QPushButton()
+    button6.setText("Växel 6")
+    button6.clicked.connect(button6_clicked)
+    led11 = LedIndicator()
+    led12 = LedIndicator()
+    led12.setChecked(True)
+    led12.setDisabled(True)  # Make the led non clickable
+    led12.setDisabled(True)  # Make the led non clickable
+    layout_6.addWidget(button6)
+    layout_6.addWidget(led11)
+    layout_6.addWidget(led12)
+    verticalButtonLayout.addLayout(layout_6)
+    led12.on_color_1 = QColor(255, 0, 0)
+    led12.on_color_2 = QColor(176, 0, 0)
+    led12.off_color_1 = QColor(28, 0, 0)
+    led12.off_color_2 = QColor(156, 0, 0)
+
+    layout_7 = QHBoxLayout()
+    button7 = QPushButton()
+    button7.setText("Växel 7")
+    button7.clicked.connect(button7_clicked)
+    led13 = LedIndicator()
+    led14 = LedIndicator()
+    led14.setChecked(True)
+    led14.setDisabled(True)  # Make the led non clickable
+    led14.setDisabled(True)  # Make the led non clickable
+    layout_7.addWidget(button7)
+    layout_7.addWidget(led13)
+    layout_7.addWidget(led14)
+    verticalButtonLayout.addLayout(layout_7)
+    led14.on_color_1 = QColor(255, 0, 0)
+    led14.on_color_2 = QColor(176, 0, 0)
+    led14.off_color_1 = QColor(28, 0, 0)
+    led14.off_color_2 = QColor(156, 0, 0)
+
+    layout_8 = QHBoxLayout()
+    button8 = QPushButton()
+    button8.setText("Växel 8")
+    button8.clicked.connect(button8_clicked)
+    led15 = LedIndicator()
+    led16 = LedIndicator()
+    led16.setChecked(True)
+    led16.setDisabled(True)  # Make the led non clickable
+    led16.setDisabled(True)  # Make the led non clickable
+    layout_8.addWidget(button8)
+    layout_8.addWidget(led15)
+    layout_8.addWidget(led16)
+    verticalButtonLayout.addLayout(layout_8)
+    led16.on_color_1 = QColor(255, 0, 0)
+    led16.on_color_2 = QColor(176, 0, 0)
+    led16.off_color_1 = QColor(28, 0, 0)
+    led16.off_color_2 = QColor(156, 0, 0)
+
+    layout_9 = QHBoxLayout()
+    button9 = QPushButton()
+    button9.setText("Växel 9")
+    button9.clicked.connect(button9_clicked)
+    led17 = LedIndicator()
+    led18 = LedIndicator()
+    led18.setChecked(True)
+    led18.setDisabled(True)  # Make the led non clickable
+    led18.setDisabled(True)  # Make the led non clickable
+    layout_9.addWidget(button9)
+    layout_9.addWidget(led17)
+    layout_9.addWidget(led18)
+    verticalButtonLayout.addLayout(layout_9)
+    led18.on_color_1 = QColor(255, 0, 0)
+    led18.on_color_2 = QColor(176, 0, 0)
+    led18.off_color_1 = QColor(28, 0, 0)
+    led18.off_color_2 = QColor(156, 0, 0)
+
+    layout_10 = QHBoxLayout()
+    button10 = QPushButton()
+    button10.setText("Växel 10")
+    button10.clicked.connect(button10_clicked)
+    led19 = LedIndicator()
+    led20 = LedIndicator()
+    led20.setChecked(True)
+    led20.setDisabled(True)  # Make the led non clickable
+    led20.setDisabled(True)  # Make the led non clickable
+    layout_10.addWidget(button10)
+    layout_10.addWidget(led19)
+    layout_10.addWidget(led20)
+    verticalButtonLayout.addLayout(layout_10)
+    led20.on_color_1 = QColor(255, 0, 0)
+    led20.on_color_2 = QColor(176, 0, 0)
+    led20.off_color_1 = QColor(28, 0, 0)
+    led20.off_color_2 = QColor(156, 0, 0)
+
+    layout_11 = QHBoxLayout()
+    button11 = QPushButton()
+    button11.setText("Växel 11")
+    button11.clicked.connect(button11_clicked)
+    led21 = LedIndicator()
+    led22 = LedIndicator()
+    led22.setChecked(True)
+    led22.setDisabled(True)  # Make the led non clickable
+    led22.setDisabled(True)  # Make the led non clickable
+    layout_11.addWidget(button11)
+    layout_11.addWidget(led21)
+    layout_11.addWidget(led22)
+    verticalButtonLayout.addLayout(layout_11)
+    led22.on_color_1 = QColor(255, 0, 0)
+    led22.on_color_2 = QColor(176, 0, 0)
+    led22.off_color_1 = QColor(28, 0, 0)
+    led22.off_color_2 = QColor(156, 0, 0)
+
+    layout_12 = QHBoxLayout()
+    button12 = QPushButton()
+    button12.setText("Växel 12")
+    button12.clicked.connect(button12_clicked)
+    led23 = LedIndicator()
+    led24 = LedIndicator()
+    led24.setChecked(True)
+    led24.setDisabled(True)  # Make the led non clickable
+    led24.setDisabled(True)  # Make the led non clickable
+    layout_12.addWidget(button12)
+    layout_12.addWidget(led23)
+    layout_12.addWidget(led24)
+    verticalButtonLayout.addLayout(layout_12)
+    led24.on_color_1 = QColor(255, 0, 0)
+    led24.on_color_2 = QColor(176, 0, 0)
+    led24.off_color_1 = QColor(28, 0, 0)
+    led24.off_color_2 = QColor(156, 0, 0)
+
+    layout_13 = QHBoxLayout()
+    button13 = QPushButton()
+    button13.setText("Växel 13")
+    button13.clicked.connect(button13_clicked)
+    led25 = LedIndicator()
+    led26 = LedIndicator()
+    led26.setChecked(True)
+    led26.setDisabled(True)  # Make the led non clickable
+    led26.setDisabled(True)  # Make the led non clickable
+    layout_13.addWidget(button13)
+    layout_13.addWidget(led25)
+    layout_13.addWidget(led26)
+    verticalButtonLayout.addLayout(layout_13)
+    led26.on_color_1 = QColor(255, 0, 0)
+    led26.on_color_2 = QColor(176, 0, 0)
+    led26.off_color_1 = QColor(28, 0, 0)
+    led26.off_color_2 = QColor(156, 0, 0)
+
+    layout_14 = QHBoxLayout()
+    button14 = QPushButton()
+    button14.setText("Växel 14")
+    button14.clicked.connect(button14_clicked)
+    led27 = LedIndicator()
+    led28 = LedIndicator()
+    led28.setChecked(True)
+    led28.setDisabled(True)  # Make the led non clickable
+    led28.setDisabled(True)  # Make the led non clickable
+    layout_14.addWidget(button14)
+    layout_14.addWidget(led27)
+    layout_14.addWidget(led28)
+    verticalButtonLayout.addLayout(layout_14)
+    led28.on_color_1 = QColor(255, 0, 0)
+    led28.on_color_2 = QColor(176, 0, 0)
+    led28.off_color_1 = QColor(28, 0, 0)
+    led28.off_color_2 = QColor(156, 0, 0)
+
+    layout_15 = QHBoxLayout()
+    button15 = QPushButton()
+    button15.setText("Växel 15")
+    button15.clicked.connect(button15_clicked)
+    led29 = LedIndicator()
+    led30 = LedIndicator()
+    led30.setChecked(True)
+    led30.setDisabled(True)  # Make the led non clickable
+    led30.setDisabled(True)  # Make the led non clickable
+    layout_15.addWidget(button15)
+    layout_15.addWidget(led29)
+    layout_15.addWidget(led30)
+    verticalButtonLayout.addLayout(layout_15)
+    led30.on_color_1 = QColor(255, 0, 0)
+    led30.on_color_2 = QColor(176, 0, 0)
+    led30.off_color_1 = QColor(28, 0, 0)
+    led30.off_color_2 = QColor(156, 0, 0)
+
+    layout_16 = QHBoxLayout()
+    button16 = QPushButton()
+    button16.setText("Växel 16")
+    button16.clicked.connect(button16_clicked)
+    led31 = LedIndicator()
+    led32 = LedIndicator()
+    led32.setChecked(True)
+    led32.setDisabled(True)  # Make the led non clickable
+    led32.setDisabled(True)  # Make the led non clickable
+    layout_16.addWidget(button16)
+    layout_16.addWidget(led31)
+    layout_16.addWidget(led32)
+    verticalButtonLayout.addLayout(layout_16)
+    led32.on_color_1 = QColor(255, 0, 0)
+    led32.on_color_2 = QColor(176, 0, 0)
+    led32.off_color_1 = QColor(28, 0, 0)
+    led32.off_color_2 = QColor(156, 0, 0)
+
+    layout_17 = QHBoxLayout()
+    button17 = QPushButton()
+    button17.setText("Växel 17")
+    button17.clicked.connect(button17_clicked)
+    led33 = LedIndicator()
+    led34 = LedIndicator()
+    led34.setChecked(True)
+    led34.setDisabled(True)  # Make the led non clickable
+    led34.setDisabled(True)  # Make the led non clickable
+    layout_17.addWidget(button17)
+    layout_17.addWidget(led33)
+    layout_17.addWidget(led34)
+    verticalButtonLayout.addLayout(layout_17)
+    led34.on_color_1 = QColor(255, 0, 0)
+    led34.on_color_2 = QColor(176, 0, 0)
+    led34.off_color_1 = QColor(28, 0, 0)
+    led34.off_color_2 = QColor(156, 0, 0)
+
+    layout_18 = QHBoxLayout()
+    button18 = QPushButton()
+    button18.setText("Växel 18")
+    button18.clicked.connect(button18_clicked)
+    led35 = LedIndicator()
+    led36 = LedIndicator()
+    led36.setChecked(True)
+    led36.setDisabled(True)  # Make the led non clickable
+    led36.setDisabled(True)  # Make the led non clickable
+    layout_18.addWidget(button18)
+    layout_18.addWidget(led35)
+    layout_18.addWidget(led36)
+    verticalButtonLayout.addLayout(layout_18)
+    led36.on_color_1 = QColor(255, 0, 0)
+    led36.on_color_2 = QColor(176, 0, 0)
+    led36.off_color_1 = QColor(28, 0, 0)
+    led36.off_color_2 = QColor(156, 0, 0)
+
+    layout_19 = QHBoxLayout()
+    button19 = QPushButton()
+    button19.setText("Växel 19")
+    button19.clicked.connect(button19_clicked)
+    led37 = LedIndicator()
+    led38 = LedIndicator()
+    led38.setChecked(True)
+    led38.setDisabled(True)  # Make the led non clickable
+    led38.setDisabled(True)  # Make the led non clickable
+    layout_19.addWidget(button19)
+    layout_19.addWidget(led37)
+    layout_19.addWidget(led38)
+    verticalButtonLayout.addLayout(layout_19)
+    led38.on_color_1 = QColor(255, 0, 0)
+    led38.on_color_2 = QColor(176, 0, 0)
+    led38.off_color_1 = QColor(28, 0, 0)
+    led38.off_color_2 = QColor(156, 0, 0)
+
+
+    topSpacer = QLabel()   
+    windowLayout.addWidget(topSpacer)
+
+
+    topLayout.addLayout(verticalButtonLayout)
+    topLayout.addWidget(label)
+    windowLayout.addLayout(topLayout)
+
+
+    window.setLayout(windowLayout)
+    window.show()
+    app.exec()
+
+
+gui_start()
