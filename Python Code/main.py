@@ -6,7 +6,7 @@
 # =============================================================================
 # Imports
 import sys
-from Widget_switch import *
+from ui_pyQT.Widget_switch import *
 # =============================================================================
 
 class Window(QMainWindow):

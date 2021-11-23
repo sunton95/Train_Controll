@@ -8,7 +8,7 @@
 from LedIndicatorWidget import *
 from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QLabel
 from PyQt5.QtGui import *
-from serial_arduino_com import write_serial_arduino
+from serial_com import write_serial
 # =============================================================================
 
 class TrainSwitch(QWidget):
@@ -48,11 +48,11 @@ class TrainSwitch(QWidget):
         self.led.setChecked(not self.led.isChecked())
 
         if self.button.isChecked(): 
-            write_serial_arduino(self.command_routing + "1")
+            write_serial(self.command_routing + "1")
             #write_i2c_arduino(self.command_routing + "1")
         # if it is unchecked 
         else: 
-            write_serial_arduino(self.command_routing + "2")
+            write_serial(self.command_routing + "2")
             #write_i2c_arduino(self.command_routing + "2")
 
 class quitApp(QWidget):
