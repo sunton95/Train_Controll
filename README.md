@@ -7,8 +7,10 @@ The PCB went trough three different iterations
 
 ![The first and second design](https://i.imgur.com/KDHDt2H.jpeg)
 
+The main hub
 ![The main hub](https://i.imgur.com/FQZg7Ew.jpg)
 
+Enclosure for the node
 ![Enclosure for node](https://i.imgur.com/KG89BVh.jpeg)
 
  # Control Hub
