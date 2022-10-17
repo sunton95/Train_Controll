@@ -5,4 +5,4 @@ The main part of the project was to design the PCB of the nodes. The plan was to
 
 The PCB went trough three different iterations
 
-![The first and second design](https://imgur.com/a/3PFuSio)
+![The first and second design](https://i.imgur.com/KDHDt2H.jpeg)
