@@ -6,3 +6,11 @@ The main part of the project was to design the PCB of the nodes. The plan was to
 The PCB went trough three different iterations
 
 ![The first and second design](https://i.imgur.com/KDHDt2H.jpeg)
+
+![Enclosure for node]([https://i.imgur.com/KDHDt2H.jpeg](https://i.imgur.com/KG89BVh.jpeg))
+
+![The main control hub]([https://i.imgur.com/KDHDt2H.jpeg](https://i.imgur.com/FQZg7Ew.jpg))
+
+ # Control Hub
+ The control hub is a raspberry pi with a touch screen. The ui is made in pyhon and communicates with the nodes by I2C.
+ 
