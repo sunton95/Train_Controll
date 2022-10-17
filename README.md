@@ -7,9 +7,9 @@ The PCB went trough three different iterations
 
 ![The first and second design](https://i.imgur.com/KDHDt2H.jpeg)
 
-![Enclosure for node](https://i.imgur.com/KDHDt2H.jpeg)
+![The main hub](https://i.imgur.com/FQZg7Ew.jpg)
 
-![The main control hub](https://i.imgur.com/KDHDt2H.jpeg)
+![Enclosure for node](https://i.imgur.com/KG89BVh.jpeg)
 
  # Control Hub
  The control hub is a raspberry pi with a touch screen. The ui is made in pyhon and communicates with the nodes by I2C.
